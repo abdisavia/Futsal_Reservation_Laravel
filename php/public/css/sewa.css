@@ -1,0 +1,302 @@
+/* font */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap'); */
+
+*{
+    margin : 0;
+    padding: 0;
+}
+
+body{
+    background-color:black;
+    position : relative;
+}
+
+/* Warna Text */
+
+.text-red{
+    color:#EC3435;
+}
+
+.border-red{
+    border:2px solid #EC3435;
+}
+
+/* NavBar */
+
+.navbar{
+    background:rgba(0, 0, 0, 0.54);
+    box-shadow: 0px 4px 17px rgba(0,0,0,0.54);
+}
+
+.logoText{
+    color : #EC3435;
+    text-shadow: 0px 4px 17px rgba(0,0,0,1);
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 0.2px;
+}
+
+.nav-link{
+    position: relative;
+}
+
+.nav-link::after{
+    content:'';
+    opacity: 0;
+    position:absolute;
+    height: 2px;
+    width: 100%;
+    background-color : #EC3435;
+    bottom : 0;
+    left:0;
+}
+
+.nav-link:hover::after{
+    opacity: 1;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.btn-login{
+    border: 2px solid #EC3435;
+    color : #EC3435;
+    font-weight: 600;
+}
+
+.btn-login:hover{
+    background-color:#EC3435;
+    color : white;  
+}
+
+/* Hero Section */
+
+.heroSectionSewa{
+    position:relative;
+    display:flex;
+    min-height: 100vh;
+    background-color: black;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+}
+
+
+.text-selamatDatang{
+    font-size :30pt;
+    position:relative;
+}
+
+.text-GoeboexFutsal{
+    font-size: 30pt;
+    /* min-height: 100px; */
+    font-family: 'Montserrat',sans-serif;
+    -webkit-text-stroke-color:white;
+    -webkit-text-stroke-width: 1px;
+}
+
+.btn-Register{
+    background:#ECA234;
+    border-radius:25px;
+    padding: 10px 20px 10px 20px;
+    border:none;
+    color: none;
+    font-weight:500;
+}
+
+.btn-Register:hover{
+    font-weight:500;
+    background: none;
+    border:3px solid #ECA234;
+    color:#ECA234;
+}
+
+/* Lapangan Section */
+.Room-details-area {
+    padding-bottom: 120px;
+  }
+  
+  .containerSewa{
+    margin: 0 auto;
+  }
+  
+  .room-description h2,
+  .room-attributes li,
+  .room-details ul li,
+  .room-title span{
+    color: white;
+  }
+
+
+  
+  .room-description p strong {
+    color: white;
+  }
+  
+  .room-description ul li {
+    color: white;
+    list-style: disc;
+    margin-left: 20px;
+  }
+  
+  .room-title h2 {
+    margin: 0;
+  }
+  
+  .room-title span {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .wpo-section-title-left {
+    text-align: left;
+    color: white;
+  }
+  
+  
+/* .judul{
+    font-family : 'poppins',sans-serif;
+    font-weight: 1000;
+    -webkit-text-stroke-color:white;
+    -webkit-text-stroke-width: 1px;
+}
+
+.lapanganCardImg{
+    width: 100%;
+    height: 17.5rem;
+    object-fit:cover;
+    border-radius: 25px 25px 0 0 ;
+}
+
+.btn-red{
+    background-color:#EC3435;
+    color : white;
+    font-size: 7pt;
+    width:95px;
+    height: 25px;
+}
+
+.card{
+    border-radius: 25px;
+}
+
+.card-body{
+    min-height: 11rem;
+    max-height: 11rem;
+}
+
+.card-text{
+    max-height:20rem;
+}
+
+swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  } */
+
+/* Jambuka & Lokasi section*/
+.jambuka{
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content:center;
+    background-image: url("../Img/falaq-lazuardi-LSOTmGcdaKQ-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+}
+
+.jambuka::before{
+    content:'';
+    display:block;
+    width:100%;
+    height: 100%;
+    background-image:linear-gradient(rgba(0, 0, 0, 1),rgba(0,0,0,0)50%,rgba(0, 0, 0, 0)40%,rgba(0,0,0,1));
+    position :absolute;
+    bottom:0px;
+    left:0px;
+}
+
+.gMapsFrames{
+    height:450px;
+    border-radius:25px;
+    width:419px;
+    position:relative;
+    display:flex;
+    z-index:2;
+}
+
+.jamb{
+    border-radius:50px;
+    width:500px;
+    height: 300px;
+    background-color:#EC3435;
+    position:absolute;
+    z-index:1;
+    top:4.5rem;
+    left:21rem;
+}
+
+.footer{
+    background-color:black;
+    min-height: 20rem;
+    display:flex;
+    align-items:center;
+    position:relative;
+    /* margin-bottom: 100px; */
+}
+
+.logoText2{
+    color : #EC3435;
+    font-weight: 1000;
+    text-shadow: 0px 4px 17px rgba(0,0,0,1);
+    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-width: 1px;
+}
+
+.hidden{
+    opacity:0;
+    filter:blur(5px);
+    transform: translateY(-50%);
+    transition: ease-out 2s;
+}
+
+.show{
+    opacity:1;
+    filter:blur(0);
+    transform: translateY(0);
+}
+
+.pembayaran {
+    background-color: black;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+    width: 158px;
+    height: 50px;
+    color: white;
+    border: 3px solid #EC3434;
+    border-radius: 18px;
+
+    margin-top: 50px
+}
+
+.pembayaran:hover{
+    background-color:#EC3434;
+    border:none;
+}
