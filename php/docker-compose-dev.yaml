@@ -1,0 +1,62 @@
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: Dockerfile.dev
+      args:
+        user: laravel
+        uid: 1000
+    image: futsalres
+    container_name: app
+    working_dir: /var/www
+    restart: unless-stopped
+    volumes: 
+      - ./:/var/www
+    depends_on:
+      - db
+      - nginx
+    # command:
+      # - php artisan migrate
+    networks:
+      futsalRes:
+        ipv4_address: 172.20.95.3
+  
+  db:
+    image: mysql:8.0
+    container_name: db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql/:/docker-entrypoint-initdb.d
+    networks:
+      futsalRes:
+        ipv4_address: 172.20.95.4
+
+  nginx:
+    image: nginx:alpine
+    container_name: server
+    restart: unless-stopped
+    ports:
+      - 8080:80
+    volumes:
+      - ./:/var/www/
+      - ./nginx/:/etc/nginx/conf.d/
+    networks:
+      futsalRes:
+        ipv4_address: 172.20.95.5
+
+networks:
+  futsalRes:
+    ipam: 
+      driver: default
+      config: 
+        - subnet: "172.20.95.0/24"
+  
+
+    
